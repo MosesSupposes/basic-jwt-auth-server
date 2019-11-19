@@ -28,3 +28,9 @@ Example of Post body:
     password: "password"
 }
 ```
+
+all users - GET https://basic-jwt-auth-server.herokuapp.com/api/users
+
+Returns an array of all users 
+
+You must have a token to access this endpoint. Acquire a token by logging in.
