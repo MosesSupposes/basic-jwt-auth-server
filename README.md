@@ -3,6 +3,7 @@
 ## Endpoints
 
 register - POST https://basic-jwt-auth-server.herokuapp.com/api/auth/register
+
 Returns a user object
 
 Example of Post body:
@@ -16,6 +17,7 @@ Example of Post body:
 
 
 login - POST https://basic-jwt-auth-server.herokuapp.com/api/auth/login
+
 Returns a user and a token 
 
 Example of Post body: 
