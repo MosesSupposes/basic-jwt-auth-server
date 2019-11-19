@@ -37,7 +37,7 @@ module.exports = class UsersController {
     static async login(req, res) {
         const [err, user] = await withCatch ( usersModel.findByUsername(req.body.username) )
 
-        if (err) res.status(404).json({ error: { message: 'Invalid username' } })
+        if (err || !user) res.status(404).json({ error: { message: 'Invalid username' } })
         else {
             bcrypt.compare(req.body.password, user.password, (err, passwordsMatch) => {
                 if (err) res.status(500).json({ error: { message: 'Internal server error'}})
